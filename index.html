@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character Set & Viewport (SEO & Accessibility এর জন্য খুবই গুরুত্বপূর্ণ) -->
+    <!-- Character Set & Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Title & Description (SEO এর জন্য বাধ্যতামূলক) -->
+    <!-- Title & Description (SEO) -->
     <title>BuildPro - Modern Builder</title>
     <meta name="description" content="Advanced site management and safety tools designed for modern builders and construction teams.">
 
@@ -21,17 +21,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- High Priority Hero Image Preload (LCP ফাস্ট করার জন্য) -->
+    <!-- High Priority Hero Image Preload -->
     <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
 
-    <!-- Asynchronous Google Fonts (Render Blocking দূর করার জাদুকরী ট্রিক) -->
+    <!-- Asynchronous Google Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
     </noscript>
 
-    <!-- Tailwind CSS CDN Link -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Tailwind Custom Configuration -->
@@ -73,10 +73,10 @@
 
     <!-- Hero Section -->
     <header id="home" class="relative w-full min-h-[600px] h-screen bg-cover bg-center text-white">
-        <!-- 60% Black Overlay -->
+        <!-- Overlay -->
         <div class="absolute inset-0 bg-black/60 z-0"></div>
         
-        <!-- Glassmorphism Navbar -->
+        <!-- Navbar -->
         <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
             <div class="flex justify-between items-center py-4 px-4 md:px-[6%]">
                 <div class="text-xl md:text-2xl font-bold text-white tracking-wide">BuildPro</div>
@@ -107,6 +107,8 @@
                     <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none cursor-pointer text-white p-1">☰</button>
                 </div>
             </div>
+            
+            <!-- Mobile Menu -->
             <div id="mobile-menu-dropdown" class="hidden lg:hidden absolute top-full left-0 w-full bg-slate-900 overflow-hidden transition-all duration-300 max-h-0 border-t border-white/10 shadow-2xl">
                 <div class="px-6 py-6 flex flex-col gap-5">
                     <a href="#home" class="mobile-link text-white text-base font-medium hover:text-primary transition-colors">Home</a>
