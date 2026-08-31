@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 1. Preconnects (আগের মতোই থাকবে) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-
-    <!-- 2. High Priority Hero Image Preload (LCP ফাস্ট করার জন্য) -->
-    <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
-
-    <!-- 3. Asynchronous Google Fonts (Render Blocking দূর করার জাদুকরী ট্রিক) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
-    </noscript>
-
-    <!-- 4. Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- 5. Background CSS -->
-    <style>
-        #home {
-            background-image: url('main-images/hero-bg.jpg');
-        }
-    </style>
+    <!-- Character Set & Viewport (SEO & Accessibility এর জন্য খুবই গুরুত্বপূর্ণ) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title & Description (SEO এর জন্য বাধ্যতামূলক) -->
+    <title>BuildPro - Modern Builder</title>
+    <meta name="description" content="Advanced site management and safety tools designed for modern builders and construction teams.">
 
     <!-- OpenGraph (OG) Tags for Social Media -->
     <meta property="og:title" content="BuildPro - Modern Builder" />
@@ -33,9 +16,21 @@
     <meta property="og:url" content="https://fda-task-5-e95f.vercel.app/" />
     <meta property="og:type" content="website" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- High Priority Hero Image Preload (LCP ফাস্ট করার জন্য) -->
+    <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
+
+    <!-- Asynchronous Google Fonts (Render Blocking দূর করার জাদুকরী ট্রিক) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    </noscript>
+
     <!-- Tailwind CSS CDN Link -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -66,6 +61,13 @@
             }
         }
     </script>
+
+    <!-- Background CSS -->
+    <style>
+        #home {
+            background-image: url('main-images/hero-bg.jpg');
+        }
+    </style>
 </head>
 <body class="font-sans text-body bg-slate-50 dark:bg-dark-bg dark:text-slate-300 transition-colors duration-300 scroll-smooth">
 
@@ -463,6 +465,6 @@
     <script src="js/textResizer.js" defer></script>
     <script src="js/highContrast.js" defer></script>
     <script src="js/dynamicFooter.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
