@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>BuildPro - Modern Builder</title>
-    <meta name="description" content="BuildPro is an advanced site management and safety tool designed for modern builders and construction teams.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="main-images/favicon.png">
-
-   <!-- Preconnect to improve Render Blocking for External Fonts & Tailwind -->
+  <!-- 1. Preconnects (আগের মতোই থাকবে) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- High Priority Hero Image Preload -->
+    <!-- 2. High Priority Hero Image Preload (LCP ফাস্ট করার জন্য) -->
     <link rel="preload" as="image" href="main-images/hero-bg.jpg" fetchpriority="high">
-    
+
+    <!-- 3. Asynchronous Google Fonts (Render Blocking দূর করার জাদুকরী ট্রিক) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    </noscript>
+
+    <!-- 4. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 5. Background CSS -->
     <style>
         #home {
             background-image: url('main-images/hero-bg.jpg');
